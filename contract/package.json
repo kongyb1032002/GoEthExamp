@@ -3,5 +3,11 @@
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
     "hardhat": "^2.22.15"
+  },
+  "scripts": {
+    "node": "npx hardhat node",
+    "test": "npx hardhat test",
+    "compile": "npx hardhat compile",
+    "deploy:local": "npx hardhat ignition deploy ./ignition/modules/Store.ts --network localhost"
   }
 }

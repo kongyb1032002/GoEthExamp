@@ -1,6 +1,6 @@
 import { buildModule } from '@nomicfoundation/hardhat-ignition/modules';
 
-const _version = 1;
+const _version = "1";
 
 const StoreModule = buildModule("StoreModule", (m) => {
     const version = m.getParameter("version", _version)

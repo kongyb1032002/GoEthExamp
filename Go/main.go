@@ -23,12 +23,12 @@ func main() {
 	//   -H "Content-Type: application/json" \
 	//   -d '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNumber","params":["latest"],"id":1}'
 
-	client, err := ethclient.Dial("wss://sepolia.infura.io/ws/v3/49c954e23a6f4cd0a93b9ee5a2067547")
+	client, err := ethclient.Dial("ws://127.0.0.1:8545/")
 	if err != nil {
 		log.Fatalf("Connect: \n\t%v", err)
 	}
-
-	contractAddress := common.HexToAddress("0x21c2c96dbfa137e23946143c71ac8330f9b44001")
+	fmt.Println("connected")
+	contractAddress := common.HexToAddress("0x5fbdb2315678afecb367f032d93f642f64180aa3")
 	query := ethereum.FilterQuery{
 		Addresses: []common.Address{contractAddress},
 	}
